@@ -1,0 +1,366 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Tekst";
+    /*Mjere*/
+    --razmaci: 1em;
+    --bRadius: var(--razmaci);
+    --boxShadow: 5px 5px 15px rgb(160, 159, 159);
+    --grid:2fr 5fr 2fr;
+
+    /*COLORS*/
+    --white: #F6FAFA;
+    --black: hsla(60, 3%, 37%);
+    --gray: hsla(60, 3%, 67%); 
+
+    --whiteTrans:#f6fafa84;
+    --grayTrans: hsla(60, 3%, 67%, 50%); 
+
+    --primary: hsla(263, 53%, 37%);
+    --secondary: hsla(304, 53%, 44%);
+
+    --primaryTrans: rgba(82, 44, 144, 0.5);
+    --secondaryTrans: hsla(304, 53%, 44%, 0.5);
+}
+body{
+    background-color: var(--white);
+    color: var(--black);
+}
+.tekst a{
+    text-decoration: none;
+    color:var(--primary);
+    font-weight: bold;
+    width: fit-content;
+    padding: 5px 15px;
+    background-color: var(--white);
+    border-radius: var(--bRadius);
+    box-shadow: 4px 4px 10px var(--gray);
+}
+.tekst span{
+    display: block;
+    margin-top: 1em;
+}
+.tekst a:hover{
+    color: var(--white);
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+}
+@font-face {
+    font-family: "Tekst";
+    src: url(Fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Naslovi";
+    src: url(Fonts/Lobster_Two/LobsterTwo-Regular.ttf);
+}
+
+section{
+    width:100% - var(--razmaci);
+    padding:var(--razmaci) var(--razmaci) 0 var(--razmaci);
+
+}
+.ukrasBack{
+    position: fixed;
+    z-index: -100;
+    width: 100%;
+    margin: auto;
+    top:20em;
+    height: 35em;
+    clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 90%);
+    background: linear-gradient(135deg, #c6c6c3 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(198,198,195,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #c6c6c3 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(198,198,195,0.5) 25%, #f6fafa 25%) 0 0/ 120px 120px;
+    background-color: #f6fafa;
+}
+
+p{
+    line-height: 1.5em;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+h1,h2{
+    font-family: "Naslovi";
+    color:var(--secondary);
+}
+h3{
+    font-size: 2.2em;
+}
+.transition{
+    transition:0.33s;
+}
+b{
+    color: var(--primary)
+}
+
+/*Navigacija-------------------------------------------------------------------------------------*/
+nav, footer{
+    width: 100%;
+    
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+
+    border-radius: var(--bRadius);
+    display: grid;
+    grid-template-columns: var(--grid);
+    box-shadow: var(--boxShadow);
+}
+#navigacija{
+    grid-column-start: 2;
+    display: flex;
+    align-items: baseline;
+    padding:0;
+    justify-content: space-around;
+}
+#navigacija a, #active a{
+    color:var(--white);
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding:1.2em 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: 0;
+    z-index: 1;
+}
+#navigacija a:hover{
+    background-color: var(--white);
+    color: var(--primary)
+}
+
+#logo{
+    font-family: "Naslovi";
+    padding:0 0 !important;
+    transform: rotate(-3deg) scale(3);
+    border-left: none;
+    z-index: 0 !important;
+}
+#logo:hover{
+    background-color: transparent !important;
+    color: var(--white) !important;
+}
+
+/*Banner-----------------------------------------------------------------------------------------*/
+.banner{
+    color: var(--white);
+    background-image: url(Images/banner/banner2.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-position-y: -10em;
+    border-radius: var(--bRadius);
+    height: 30em;
+    box-shadow: var(--boxShadow);
+}
+.bannerContent{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--bRadius);
+    background: linear-gradient(to right, var(--primaryTrans), var(--secondaryTrans));
+    display: grid;
+    grid-template-columns: var(--grid);
+
+}
+.bannerContent > div{
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bannerContent h2{
+    /*font-family: "RedHat";*/
+    text-shadow: 3px 3px var(--secondary);
+    color:var(--white);
+    font-size: 4em;
+}
+.bannerContent h3{
+    font-weight: 650;
+    letter-spacing: 0.1em;
+}
+.bannerContent a{
+    text-decoration: none;
+    color:var(--white)
+}
+.bannerContent hr{
+    border:2px solid var(--white);
+    border-radius: var(--bRadius);
+    box-shadow: 3px 3px var(--secondary);
+    width: 40%;
+}
+
+/*Sadrzaj----------------------------------------------------------------------------------------*/
+.content{
+    width:100%;
+    margin-top: 2em;
+    display:grid;
+    grid-template-columns: var(--grid);
+}
+
+.content > div:first-child {
+    grid-column-start: 2;
+}
+
+.content h2{
+    font-size: 3.5em;
+    margin-left: 0.6em;
+    text-shadow: 3px 3px var(--primary);
+    position: relative;
+    z-index: 2;
+}
+.tekst{
+    background: rgba(246,250,250,0.4);
+-webkit-backdrop-filter: blur(8px);
+backdrop-filter: blur(8px);
+    border-radius: var(--bRadius);
+    box-shadow: var(--boxShadow);
+    overflow:hidden;
+}
+.tekstContent{
+    margin: 1em 2em;
+}
+/*.tekst p{
+    margin: 1em 2em;
+}*/
+
+/*Footer-----------------------------------------------------------------------------------------*/
+footer{
+    margin-bottom: var(--razmaci);
+    font-weight: bold;
+    font-size: 1em;
+}
+footer a{
+    color: var(--white)
+}
+footer div{
+    color: var(--white);
+    padding: var(--razmaci) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footerContent{
+    grid-column-start: 2;
+}
+.linkovi{
+    font-size:1.6em;
+    display:inline;
+}
+
+
+/*Responzinost-----------------------------------------------------------------------------------*/
+#active{
+    display: none;
+}
+
+@media only screen and (max-width:1600px){
+    *{
+        --grid: 1fr 5fr 1fr;
+    }
+
+    .banner{
+        background-image: url(Images/banner/bannerUzi.jpg);
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    *{
+        --grid: 1fr;
+        --razmaci: 1.4em;
+    }
+
+    .content > div:first-child, #navigacija, .bannerContent > div{
+        grid-column-start: 1;
+    }
+
+    .bannerContent > div{
+        margin: 0 3em;
+    }
+
+    #navigacija{
+        grid-column-start: 1;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 2fr 5fr 2fr;
+    }
+    .footerContent{
+        grid-column-start: 2;
+    }
+    .banner{
+        background-size:cover;
+        background-attachment: local;
+        background-repeat: no-repeat;
+        background-image: url(Images/banner/bannerNajuzi.jpg);
+    }
+}
+
+@media only screen and (max-width: 850px){
+    *{
+        --razmaci:1em;
+    }
+
+    .content h2{
+        margin: 0;
+    }
+    .tekst a{
+        display: inline-block;
+        margin-bottom:var(--razmaci);
+    }
+    
+    #nav{
+        display:none;
+        /*background-color: var(--white);*/
+        background: var(--white);
+        color: var(--primary);
+        background: rgba(246,250,250,0.35);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+    }
+    #navigacija{
+        margin: var(--razmaci);
+        text-align: left;
+        flex-direction: column;
+    }
+    #navigacija a{
+        color: var(--black);
+        font-weight: normal;
+        white-space:nowrap;
+    }
+    #active{
+        border-radius: var(--bRadius);
+        box-shadow: var(--boxShadow);
+        color: var(--white);
+        background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+        background-color: #ac35a4;
+        display: flex;
+        grid-column-start: 1;
+    }
+    #active a, #navigacija a{
+        display: inline;
+        padding: 0;
+        width: min-content;
+    }
+    #active a{
+        font-size: 2em;
+    }
+    #active #logo{
+        transform: rotate(0) scale(1);
+        float: left;
+    }
+    #active div{
+        width: 100%;
+        margin: var(--razmaci);
+        display: flex;
+        justify-content: space-between;
+    }
+    #navigacija #logo{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    footer .linkovi{
+        display:inline-flex;
+    }
+}

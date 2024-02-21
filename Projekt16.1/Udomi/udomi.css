@@ -1,0 +1,189 @@
+/*Filter-----------------------------------------------------------------------------------------*/
+.filteri{
+    text-align: right;
+    color: var(--white);
+    font-weight: bold;
+}
+.filteriButton{
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+    border-radius: var(--bRadius);
+    box-shadow: var(--boxShadow);
+    padding: 10px 0;
+}
+.filteri div:has(form){
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    text-align: left;
+    color: var(--gray);
+}
+form{
+    display: none;
+    height: fit-content;
+    padding: 0.6em 1em;
+    position: absolute;
+    border-radius: var(--bRadius);
+    box-shadow: var(--boxShadow);
+    z-index: 2;
+    background-color: var(--white);
+    font-size: 1em;
+}
+
+button{
+    margin-left: var(--razmaci);
+    font-size:1.2em;
+}
+
+button{
+    padding:2px 15px;
+    color:var(--white);
+    width: fit-content;
+    background-color: transparent;
+    margin-right: var(--razmaci);
+}
+.potvrdi{
+    color: var(--primary);
+    background-color: (--white);
+    box-shadow: var(--boxShadow);
+    padding: 0;
+    margin: 0.6em 0 0 0;
+    width: 100%;
+
+}
+select, button{
+    font-size:1.2em;
+    border-radius: var(--bRadius);
+    border: none;
+}
+select:hover, button:hover{
+    cursor: pointer;
+}
+select{
+    background-color: transparent;
+    color: var(--primary);
+    margin-left: 0.2em;
+}
+
+/*Pas--------------------------------------------------------------------------------------------*/
+h3{
+    font-family: "Naslovi";
+    color: var(--secondary);
+}
+.contentPas{
+    margin-top: 0;
+}
+.pas{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: var(--razmaci);
+    height: 12em;
+}
+
+
+.pas > div:first-child{
+    grid-column-start: 1;
+    box-shadow: var(--boxShadow);
+    background-color: var(--white);
+    border-radius: var(--bRadius);
+    display: flex;
+    flex-direction: row;
+}
+.pasSlika{
+    width: 33%;
+    clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: var(--bRadius);
+    border-top-left-radius: var(--bRadius);
+}
+
+.pasOpis{
+    margin: 0em 2em;
+    width: 66%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.pasOpis span{
+    margin: 2em 1em 0 0;
+}
+
+.gumb{
+    clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%);
+    grid-column-start: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+    border-radius: var(--bRadius);
+    box-shadow: var(--boxShadow);
+}
+.gumb p{
+    color: var(--white);
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.gumb:hover{
+    cursor: pointer;
+}
+.gumb:hover .vise{
+    transform: rotate(5deg) scale(1.2);
+}
+.pas:hover{
+    transform: scale(1.025);
+}
+
+
+@media(max-width:1200px){
+    .content > div:first-child{
+        grid-column-start: 1;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .pas{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        margin-bottom: var(--razmaci);
+    }
+    .pas > div:first-child{
+        height: 30em;
+        flex-direction: column;
+    }
+    .pasSlika{
+        width: 100%;
+        clip-path: none;
+        border-top-right-radius: var(--bRadius);
+        border-bottom-left-radius: 0;
+        height: 66%;
+    }
+    .pasOpis{
+        margin-top: var(--razmaci);
+        height: fit-content;
+    }
+    .pasOpis p:first-of-type{
+        display:none;
+    }
+    .pasOpis p:has(i){
+        margin:0.6em 0;
+    }
+    .gumb{
+        clip-path: none;
+        position: relative;
+    }
+    .pas:hover{
+        transform: scale(1);
+    }
+    .gumb:hover .vise{
+        transform: rotate(0) scale(1);
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Indigo | Naslovna</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css1.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="naslovna.css" type="text/css" media="screen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a2af206384.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="ukrasBack"></div>
+        <!--Header-->
+        <section>
+            <div id="active">
+                <div>
+                    <a id="logo" href="naslovna.html">Indigo</a>
+                    <a href="#" id="menu" onclick="headerFunction()"><i class="fa-solid fa-bars"></i></a>
+                    <a href="#" id="close" onclick="headerFunction()" style="display:none"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+            <nav id="nav" class="transition">
+                <div id="navigacija">
+                    <a class="transition" href="Udomi/udomi.html">Udomi</a>
+                    <a class="transition" href="Volontiranje/volontiranje.html">Volontiranje</a>
+                    <a class="transition" id="logo" href="naslovna.html">Indigo</a>
+                    <a class="transition" href="ONama/oNama.html">O nama</a>
+                    <a class="transition" href="Kontakt/kontakt.html">Kontakt</a>
+                </div>
+            </nav>
+        </section>
+        
+        <!--Banner-->
+        <section>
+            <div class="banner">
+                <div class="bannerContent">
+                    <div><a href="Udomi/udomi.html">
+                        <h2 class="transition">Udomi</h2><hr>
+                        <h3 class="transition">Pronađi svoju srodnu njuškicu!</h3>
+                    </a></div>
+                </div>
+            </div>
+        </section>
+
+        <!--O nama-->
+        <section>
+            <div class="content">
+                <div class="oNama">
+                    <h2>Što je Indigo?</h2>
+                    <div class="tekst">
+                        <div class="tekstContent">
+                            <p>
+                                Centar Indigo je neprofitna organizacija čiji je cilj i misija zbrinjavanje i udomljavanje životinja, socijalizacija zlostavljanih i zanemarenih životinja te edukacija budućih i trenutnih vlasnika.                                <span><a href="ONama/oNama.html" class="transition">Pročitaj više <i class="fa-solid fa-link"></i></a></span>
+                            </p>
+                            <i class="fa-solid fa-paw prva"></i>
+                            <i class="fa-solid fa-paw"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Volontiranje-->
+        <section>
+            <div class="content volontiranje">
+                <div>
+                    <h2>Želite pomoći?</h2>
+                    <div class="tekst">
+                        <div class="tekstContent">
+                            <p>
+                                Svi ljudi koji vole životinje i žele pomoći na bilo koji način mogu se učlaniti u Centar, posjetiti stranicu putem linka dolje ili  nam se javiti preko društvenih mreža.                                <span><a href="Volontiranje/volontiranje.html" id="prvi" class="transition">Volontiranje</a><a href="Kontakt/kontakt.html" id="drugi" class="transition">Kontaktirajte nas</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--Novosti-->
+        <section>
+            <div class="content">
+                <div class="novosti">
+                    <h2>Novosti</h2>
+                    <div class="novost">
+                        <div class="tekst transition" id="novostTekst">
+                            <div id="novostSlika"></div>
+                            <div>
+                                <h3 id="trenutniNaslov"></h3>
+                                <p id="trenutniTekst"></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="arrows">
+                        <button class="transition" id="prijasnji"><i class="fa-solid fa-caret-left"></i></button>
+                        <button class="transition" id="sljedeci"><i class="fa-solid fa-caret-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <section>
+            <footer>
+                <div class="footerContent">© 2013 - 2024<br>Indigo udruga za zaštitu životinja</div>
+                <div class="linkovi">
+                    <a href="mailto: udomitelj.indigo@gmail.com" class="transition"><i class="fa-solid fa-square-envelope"></i></a>
+                    <a href="https://www.facebook.com/Indigo.udruga?locale=hr_HR" target="_blank" class="transition"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/udruga.indigo/" target="_blank" class="transition"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </footer>
+        </section>
+    </body>
+    <script src="naslovna.js"></script>
+    <script src="header.js"></script>
+</html>

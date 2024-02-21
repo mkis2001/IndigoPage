@@ -1,0 +1,88 @@
+h3{
+    color:var(--primary);
+    font-family: "Naslovi";
+    font-size: 2.6em;
+    margin-top: 0.4em;
+    width: fit-content;
+}
+hr{
+    border:1px solid var(--grayTrans);
+    width: 50%;
+    margin: 0.2em 0 var(--razmaci) 0;
+    border-radius: var(--bRadius);
+}
+.vise .tekst{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: var(--razmaci)
+}
+
+.tekstContent{
+    grid-column-start: 2;
+}
+
+.tekstContent ul{
+    margin: var(--razmaci)    
+}
+
+li{
+    list-style-type: none;
+    font-size: 1.2em;
+    margin-bottom: 0.6em;
+}
+
+li b{
+    color:var(--primary);
+}
+
+
+/*Slika*/
+.postSlika{
+    margin: var(--razmaci);
+    margin-right: 0;
+    grid-column-start: 1;
+    border-radius: var(--bRadius);
+    background-image: url("../Images/Peseki/dingo.jpg");
+    background-size: cover;
+}
+
+/*Javi se*/
+.javiSe{
+    color: var(--white);
+    font-weight: bold;
+}
+.javiSe h2{
+    text-align: right;
+    margin-right: 0.6em;
+}
+
+.javiSe .tekst{
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+}
+
+.javiSe span{
+    text-align: right;
+}
+
+.javiSe a{
+    box-shadow: none;
+}
+
+@media only screen and (max-width:768px){
+    .vise .tekst{
+        display: flex;
+        flex-direction: column;
+    }
+    .postSlika{
+        margin: var(--razmaci);
+        height: 30em;
+    }
+}
+
+@media only screen and (max-width:576px){
+    .postSlika{
+        margin: var(--razmaci);
+        height: 20em;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Indigo | Kontakt</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css1.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="kontakt.css" type="text/css" media="screen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a2af206384.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="ukrasBack"></div>
+        <!--HEADER-->
+        <section>
+            <div id="active">
+                <div>
+                    <a class="transition" href="../naslovna.html" id="logo">Indigo</a>
+                    <a href="#" id="menu" onclick="headerFunction()"><i class="fa-solid fa-bars"></i></a>
+                    <a href="#" id="close" onclick="headerFunction()" style="display:none"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+            <nav id="nav" class="transition">
+                <div id="navigacija">
+                    <a class="transition" href="../Udomi/udomi.html">Udomi</a>
+                    <a class="transition" href="../Volontiranje/volontiranje.html">Volontiranje</a>
+                    <a class="transition" href="../naslovna.html" id="logo">Indigo</a>
+                    <a class="transition" href="../ONama/oNama.html">O nama</a>
+                    <a class="transition" href="kontakt.html">Kontakt</a>
+                </div>
+            </nav>
+        </section>
+
+        <section>
+            <div class="content">
+                <div>
+                    <h2 style="white-space: nowrap;">Kontakt</h2>
+                    <div class="tekst">
+                        <div class="tekstContent">
+                            <p>
+                                Ukoliko ste zainteresirani za udomljenje, želite volontirati, pomoći nam donacijom ili imate neko drugo pitanje,
+                                možete nam se obratiti nekim od dolje navedenim medijima ili nam poslati upit preko kontakt forme.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="drustvene">
+                    <div class="tekst forma">
+                        <div class="tekstContent">
+                            <form action="">
+                                <label for="ime">Ime</label><br>
+                                <input type="text" name="ime"><br>
+
+                                <label for="email">E-Mail</label><br>
+                                <input type="email"><br>
+
+                                <label for="">Vrsta upita</label><br>
+                                <input type="radio" name="razlog" value="udom" id="udomljenje" required><label for="udomljenje">Udomljenje</label><br>
+                                <input type="radio" name="razlog" value="volon" id="volontiranje" required><label for="volontiranje">Volontiranje</label><br>
+                                <input type="radio" name="razlog" value="don" id="donacija" required><label for="donacija">Donacija</label><br>
+                                <input type="radio" name="razlog" value="druog" id="drugo"  style="margin-bottom: 1em;" required><label for="drugo">Drugo</label><br>
+
+                                <label for="poruka">Poruka:</label><br>
+                                <textarea name="poruka" id="poruka" cols="25" rows="10"></textarea><br>
+
+                                <button type="submit" class="transition">Pošalji <i class="fa-solid fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tekst mreze">
+                        <div class="tekstContent">
+                            <a href="mailto: udomitelj.indigo@gmail.com" class="transition"><i class="fa-solid fa-square-envelope"></i> udomitelj.indigo@gmail.com</a>
+                            <a href="https://www.facebook.com/Indigo.udruga?locale=hr_HR" target="_blank" class="transition"><i class="fa-brands fa-square-facebook"></i> Udruga za dobrobit i zaštitu životinja Indigo</a>
+                            <a href="https://www.instagram.com/udruga.indigo/" target="_blank" class="transition"><i class="fa-brands fa-square-instagram"></i> @udruga.indigo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--FOOTER-->
+        <section>
+            <footer>
+                <div class="footerContent">© 2013 - 2024<br>Indigo udruga za zaštitu životinja</div>
+                <div class="linkovi">
+                    <a href="mailto: udomitelj.indigo@gmail.com" class="transition"><i class="fa-solid fa-square-envelope"></i></a>
+                    <a href="https://www.facebook.com/Indigo.udruga?locale=hr_HR" target="_blank" class="transition"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/udruga.indigo/" target="_blank" class="transition"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </footer>
+        </section>
+    </body>
+    <script src="../header.js"></script>
+</html>

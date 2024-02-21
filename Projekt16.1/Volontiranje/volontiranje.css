@@ -1,0 +1,28 @@
+.tekst a{
+    padding:0;
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--primary);
+    margin-bottom: 0;
+}
+.tekst a:hover{
+    background-color: transparent;
+    background: none;
+    color: var(--primary);
+}
+hr{
+    border:1px solid var(--grayTrans);
+    width: 100%;
+    margin: 0.2em 0 2em 0;
+    border-radius: var(--bRadius);
+}
+.placanje{
+    color: var(--white);
+    margin-top: var(--razmaci);
+    font-weight: bold;
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+    border-radius: var(--bRadius);
+    padding:var(--razmaci);
+    width: fit-content;
+}

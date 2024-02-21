@@ -1,0 +1,206 @@
+/*O nama-----------------------------------------------------------------------------------------*/
+.oNama p{
+    float:left;
+}
+.oNama .fa-paw{
+    color:var(--grayTrans);
+    float: right;
+    transform: translate(-7em, -3em) rotate(15deg) scale(3)
+}
+.oNama .prva{
+    transform: translate(-15em, -3em) rotate(-30deg) scale(2);
+}
+
+/*Volontiranje-----------------------------------------------------------------------------------*/
+.volontiranje h2{
+    margin-right: 0.6em;
+    text-align: right;
+}
+
+.volontiranje .tekst{
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+    color: white;
+    font-weight: bold;
+    text-align: right;
+}
+
+.volontiranje a{
+    box-shadow: none;
+}
+.volontiranje a:hover{
+    background-color: transparent;
+}
+#prvi{
+    border-top-right-radius: 5px;
+    padding-right: 10px;
+    border-bottom-right-radius: 5px;
+    margin-right: 3px;
+}
+#drugi{
+    padding-left: 10px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius: 5px;
+}
+/*Novosti----------------------------------------------------------------------------------------*/
+.novosti{
+    width: 100%;
+    border-radius: var(--bRadius);
+}
+
+.novosti h2{
+    clear: both;
+}
+
+.novost{    
+    margin-bottom: var(--razmaci);
+}
+
+#novostTekst{
+    background-color: var(--white);
+    box-shadow: var(--boxShadow);
+    display:grid;
+    grid-template-columns: 2fr 3fr;
+    height: 20em;
+}
+@media only screen and (max-width:768px){
+    #novostTekst{
+        display: flex;
+        flex-direction: column;
+        height: 40em;
+    }
+    #novostSlika{
+        height: 50%;
+    }
+}
+
+#novostSlika{
+    grid-column-start: 1;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+#trenutniNaslov{
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+    color:var(--white);
+    margin-top: 0.4em;
+    padding:0.1em 1em;
+    font-size: 1.4em;
+    border-radius: var(--bRadius);
+    box-shadow: var(--boxShadow);
+    transform: rotate(-4deg) translate(1em, 0.5em);
+    width: fit-content;
+}
+#trenutniTekst{
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 1em;
+}
+.arrows{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+    border-radius: var(--bRadius);
+    box-shadow: var(--boxShadow);
+}
+.arrows button{
+    background-color: transparent;
+    border: none;
+    color:var(--white);
+    font-size: 3em;
+}
+.arrows button:hover{
+    cursor: pointer;
+}
+.arrows button:disabled{
+    color:var(--whiteTrans);
+}
+.arrows button:disabled:hover{
+    transform: none;
+    cursor: inherit;
+}
+.strelicaKlikAnimacija{
+    animation: strelicaKlik 0.33s ease 0s 1 both;
+}
+
+
+.sljedeciAnimacija{
+    animation: sljedeciAnim 0.66s ease 0s 1 both;
+}
+.prijasnjiAnimacija{
+    animation: sljedeciAnim 0.66s ease 0s 1 both;
+    animation-direction: reverse;
+}
+
+/*Animacije--------------------------------------------------------------------------------------*/
+
+@keyframes sljedeciAnim{
+    0%{
+        transform: translateX(0)
+    }
+
+    49%{
+        transform: translateX(-2em);
+        opacity: 0;
+    }
+    51%{
+        transform: translateX(2em);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes strelicaKlik{
+    0%, 100%{
+        transform: translateY(0) scale(inherit)
+    }
+    50%{
+        transform: translateY(0.1em);
+    }
+}
+
+/*Responzivnost----------------------------------------------------------------------------------*/
+@media only screen and (max-width:768px){
+    .volontiranje h2, .volontiranje .tekst{
+        text-align: left;
+    }
+
+    
+
+}
+
+@media only screen and (max-width:550px){
+    .banner{
+        background-color: white;
+        height: 15em;
+    }
+    .bannerContent{
+        font-size: smaller;
+    }
+    .oNama i{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 426px){
+    .volontiranje a{
+        padding: 5px 15px !important;
+    }
+        
+    #prvi{
+        margin-right: 0px;
+        border-radius: var(--bRadius) var(--bRadius) 5px 5px !important;
+        margin-bottom: 3px;
+    }
+    #drugi{
+        border-bottom-left-radius: var(--bRadius);
+    }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Indigo | Udomi</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css1.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="udomi.css" type="text/css" media="screen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a2af206384.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="ukrasBack"></div>
+        <!--HEADER-->
+        <section>
+            <div id="active">
+                <div>
+                    <a class="transition" href="../naslovna.html" id="logo">Indigo</a>
+                    <a href="#" id="menu" onclick="headerFunction()"><i class="fa-solid fa-bars"></i></a>
+                    <a href="#" id="close" onclick="headerFunction()" style="display:none"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+            <nav id="nav" class="transition">
+                <div id="navigacija">
+                    <a class="transition" href="udomi.html">Udomi</a>
+                    <a class="transition" href="../Volontiranje/volontiranje.html">Volontiranje</a>
+                    <a class="transition" href="../naslovna.html" id="logo">Indigo</a>
+                    <a class="transition" href="../ONama/oNama.html">O nama</a>
+                    <a class="transition" href="../Kontakt/kontakt.html">Kontakt</a>
+                </div>
+            </nav>
+        </section>
+
+        <!--UVOD-->
+        <section>
+            <div class="content">
+                <div>
+                    <h2>Kako udomiti?</h2>
+                    <div class="tekst">
+                        <div class="tekstContent">
+                            <p>
+                                Na stranici proučite ljubimce koji su spremni za udomljenje te nas potom kontaktirajte kako bi dogovorili vaše upoznavanje!
+                                <br>
+                                Novim vlasnicima nudimo i "Školicu za pse i vlasnike" gdje Vas upoznajemo s pasminom vašeg novog ljubimca te Vas educiramo kako se najbolje brinuti o njemu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Filter-->
+        <section>
+            <div class="content">
+                <div class="filteri">
+                    <div class="filteriButton">
+                        <button onclick="revealFilter()" id="gore" style="display: none;">Filter <i class="fa-solid fa-caret-up"></i></button>
+                        <button onclick="revealFilter()" id="dolje">Filter <i class="fa-solid fa-caret-down"></i></button>
+                    </div>
+                    <div>
+                        <form id="forma" action="" class="transition">
+                            <div>
+                                <label for="size">Veličina: </label>
+                                <select name="size" id="size">
+                                    <option value="any" selected>Sve</option>
+                                    <option value="mali">Mali</option>
+                                    <option value="sredni">Srednji</option>
+                                    <option value="veliki">Veliki</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="dob">Dob: </label>
+                                <select name="dob" id="dob">
+                                    <option value="any" selected>Sve</option>
+                                    <option value="mladi">Mladi</option>
+                                    <option value="odrasli">Odrasli</option>
+                                    <option value="stariji">Stariji</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="spol">Spol: </label>
+                                <select name="spol" id="spol">
+                                    <option value="any" selected>Sve</option>
+                                    <option value="musk">Muški</option>
+                                    <option value="zensk">Ženski</option>
+                                </select>
+                            </div>
+                            <button class="potvrdi" onclick="submit()" class="transition">Potvrdi <i class="fa-solid fa-check"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Lista-->
+        <section>
+            <div class="content contentPas">
+                <div class="pas transition">
+                    <div>
+                        <div class="pasSlika transition" style="background-image: url('../Images/Peseki/dingo.jpg');"></div>
+                        <div class="pasOpis transition">
+                            <h3>Dingo</h3>
+                            <p>
+                                <span><b>Veličina: </b>srednji</span>
+                                <span><b>Dob: </b>mlad</span>
+                                <span><b>Spol: </b>muško</span>
+                            </p>
+                            <p><i>"Dingo - najljepsi, najbolji, jedini nedostatak je čovjek..."</i></p>
+                        </div>
+                    </div>
+                    <div class="gumb transition" onclick="window.open('../Post/post.html')"><p class="vise transition">Više...</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="content contentPas">
+                <div class="pas transition">
+                    <div>
+                        <div class="pasSlika transition" style="background-image: url('../Images/Peseki/cindy.jpg');"></div>
+                        <div class="pasOpis transition">
+                            <h3>Cindy</h3>
+                            <p>
+                                <span><b>Veličina: </b>maleni</span>
+                                <span><b>Dob: </b>mlad</span>
+                                <span><b>Spol: </b>žensko</span>
+                            </p>
+                            <p><i>"Teta čuvalica ima samo riječi hvale za malenu..."</i></p>
+                        </div>
+                    </div>
+                    <div class="gumb transition" onclick="window.open('../Post/post.html')"><p class="vise transition">Više...</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="content contentPas">
+                <div class="pas transition">
+                    <div>
+                        <div class="pasSlika transition" style="background-image: url('../Images/Peseki/jolly.jpg');"></div>
+                        <div class="pasOpis transition">
+                            <h3>Jolly</h3>
+                            <p>
+                                <span><b>Veličina: </b>srednji</span>
+                                <span><b>Dob: </b>mlad</span>
+                                <span><b>Spol: </b>žensko</span>
+                            </p>
+                            <p><i>"U fazi je istraživanja svega oko sebe, jako je znatiželjna..."</i></p>
+                        </div>
+                    </div>
+                    <div class="gumb transition" onclick="window.open('../Post/post.html')"><p class="vise transition">Više...</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="content contentPas">
+                <div class="pas transition">
+                    <div>
+                        <div class="pasSlika transition" style="background-image: url('../Images/Peseki/patrik.jpg');"></div>
+                        <div class="pasOpis transition">
+                            <h3>Patrik</h3>
+                            <p>
+                                <span><b>Veličina: </b>mali</span>
+                                <span><b>Dob: </b>mlad</span>
+                                <span><b>Spol: </b>muško</span>
+                            </p>
+                            <p><i>"Patrik nam se oporavlja, a sada treba pomoć..."</i></p>
+                        </div>
+                    </div>
+                    <div class="gumb transition" onclick="window.open('../Post/post.html')"><p class="vise transition">Više...</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="content contentPas">
+                <div class="pas transition">
+                    <div>
+                        <div class="pasSlika" style="background-image: url('../Images/Peseki/divjiCvit.jpg');"></div>
+                        <div class="pasOpis">
+                            <h3>Divji cvit</h3>
+                            <p>
+                                <span><b>Veličina: </b>veliki</span>
+                                <span><b>Dob: </b>mlad</span>
+                                <span><b>Spol: </b>žensko</span>
+                            </p>
+                            <p><i>"Curica Divji Cvit je otišla iz boxa čuvalici, molimo Vas da ju ne vraćamo u box..."</i></p>
+                        </div>
+                    </div>
+                    <div class="gumb transition" onclick="window.open('../Post/post.html')"><p class="vise transition">Više...</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!--FOOTER-->
+        <section>
+            <footer>
+                <div class="footerContent">© 2013 - 2024<br>Indigo udruga za zaštitu životinja</div>
+                <div class="linkovi">
+                    <a href="mailto: udomitelj.indigo@gmail.com" class="transition"><i class="fa-solid fa-square-envelope"></i></a>
+                    <a href="https://www.facebook.com/Indigo.udruga?locale=hr_HR" target="_blank" class="transition"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/udruga.indigo/" target="_blank" class="transition"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </footer>
+        </section>
+    </body>
+    <script src="../header.js"></script>
+    <script src="filter.js"></script>
+</html>

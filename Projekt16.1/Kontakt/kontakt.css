@@ -1,0 +1,88 @@
+.drustvene{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: var(--razmaci);
+}
+
+.forma{
+    background-color: var(--white);
+    grid-column-start: 1;
+}
+
+.forma input, textarea{
+    border-radius: var(--bRadius);
+    border: 2px solid var(--primaryTrans);
+    outline: none;
+    background-color: transparent;
+    font-size: 1em;
+    padding:0 0.6em;
+    margin-bottom: 1em;
+}
+
+.forma input[type='radio']{
+    margin-bottom: auto;
+    margin-left: var(--razmaci);
+}
+
+.forma button{
+    font-weight: 1em;
+    border: none;
+    color:var(--primary);
+    font-weight: bold;
+    width: fit-content;
+    padding: 5px 15px;
+    background-color: var(--white);
+    border-radius: var(--bRadius);
+    box-shadow: 4px 4px 10px var(--gray);
+}
+.forma button:hover{
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+}
+.forma button:active{
+    transform: translateY(0.2em);
+}
+.mreze{
+    grid-column-start: 2;
+    color: var(--white);
+    background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+    background-color: #ac35a4;
+    height: fit-content;
+}
+
+.mreze a{
+    background-color: transparent;
+    color: var(--white);
+    box-shadow: none;
+    display: block;
+    margin:0;
+    font-size: 1.2em;
+}
+
+
+@media only screen and (max-width: 992px){
+    .drustvene{
+        display: flex;
+        flex-direction: column;
+    }
+    .forma{
+        width: fit-content;
+        margin: auto;
+    }
+    input[type="text"], input[type="email"], textarea{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .forma{
+        width: 100%;
+    }
+    
+    .drustvene .tekstContent{
+        margin: 1em var(--razmaci);
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Indigo | O nama</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css1.css" type="text/css" media="screen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a2af206384.js" crossorigin="anonymous"></script>
+        <style>
+            .drugi{
+                color: var(--white);
+                font-weight: bold;
+                background: linear-gradient(135deg, #532c90 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(225deg, rgba(83,44,144,0.5) 25%, transparent 25%) -60px 0/ 120px 120px, linear-gradient(315deg, #532c90 25%, transparent 25%) 0 0/ 120px 120px, linear-gradient(45deg, rgba(83,44,144,0.5) 25%, #ac35a4 25%) 0 0/ 120px 120px;
+                background-color: #ac35a4;
+            }
+            .content:has(.drugi){
+                margin-top: var(--razmaci);
+            }
+            .drugi a{
+                box-shadow: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ukrasBack"></div>
+        <!--Header--> 
+        <section>
+            <div id="active">
+                <div>
+                    <a id="logo" href="../naslovna.html">Indigo</a>
+                    <a href="#" id="menu" onclick="headerFunction()"><i class="fa-solid fa-bars"></i></a>
+                    <a href="#" id="close" onclick="headerFunction()" style="display:none"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+            <nav id="nav" class="transition">
+                <div id="navigacija">
+                    <a class="transition" href="../Udomi/udomi.html">Udomi</a>
+                    <a class="transition" href="../Volontiranje/volontiranje.html">Volontiranje</a>
+                    <a class="transition" id="logo" href="../naslovna.html">Indigo</a>
+                    <a class="transition" href="oNama.html">O nama</a>
+                    <a class="transition" href="../Kontakt/kontakt.html">Kontakt</a>
+                </div>
+            </nav>
+        </section>
+
+        <!--O nama-->
+        <section>
+            <div class="content">
+                <div>
+                    <h2>O nama</h2>
+                    <div class="tekst">
+                        <div class="tekstContent">
+                            <p>
+                                Udruga za dobrobit i zaštitu životinja Indigo nastala je iz ljubavi prema životinjama.
+                                Centar je osnovan 23.10.2013.
+                            </p>
+                            <p>
+                                Osnivači Centra se već dugi niz godina bave <b>spašavanjem životinja, volontiranjem, udomljavanjem životinja te edukacijom</b>, a glavni cilj je <b>zbrinjavanje zlostavljanih i napuštenih životinja.</b>
+                                <br>
+                                Osim samog zbrinjavanja, cilj nije samo udomiti životinju nego i pronaći kompatibilnog vlasnika. <b>Edukacija budućih i trenutnih vlasnika</b> životinja je primarna. Većinom vlasnici udomljuju životinje po ljepoti dok s druge strane ne obraćaju pozornost na karakter sebe i životinje. 
+                            </p>
+                            <p>
+                                Centar za pse Indigo nudi svim osobama koje udome pse <b>školicu za pse</b> – osnovne ponašanja.
+                                <br>
+                                Ideja o "Školici za pse i vlasnike" je nastala baš iz tog razloga što mnogi vlasnici možda nisu imali psa ili ne poznaju tu pasminu ili osnove ponašanja i rada sa psom. Osim toga, školica omogućuje kvalitetniji odnos vlasnika i ljubimca te samim time Centar se brine da je pas zbrinut po svim pravilima. 
+                                <br>
+                                Osim školice za pse, Centar se bavi <b>socijalizacijom i resocijalizacijom zlostavljanih i traumatiziranih pasa</b> te edukacijom ljudi o tzv „opasnim“ pasmina.
+                            </p>
+                            <p>
+                                Edukacija kako i kome prijaviti zlostavljanje životinje, kako se ponašati i kako pristupiti zlostavljanoj i napuštenoj životinji je također sastavni dio misije Centra Indigo. 
+                                <br>
+                                Centar za pse Indigo želi olakšati novim vlasnicima početak te nudi udomiteljima popuste u određenim Pet Shopovima te u određenim Veterinarskim ambulantama s kojima imamo Ugovor o suradnji. Također određene popuste ostvaraju i svi budući članovi Centra za pse Indigo.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div>
+                    <div class="tekst drugi">
+                        <div class="tekstContent">
+                            <p>
+                                Ovim putem pozivamo sve ljude koji vole životinje i žele pomoći na bilo koji način da se učlane u Centar ili posjete našu stranicu s linka dolje.
+                                <span><a href="../Volontiranje/volontiranje.html" class="transition">Volontiranje</a></span>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <section>
+            <footer>
+                <div class="footerContent">© 2013 - 2024<br>Indigo udruga za zaštitu životinja</div>
+                <div class="linkovi">
+                    <a href="mailto: udomitelj.indigo@gmail.com" class="transition"><i class="fa-solid fa-square-envelope"></i></a>
+                    <a href="https://www.facebook.com/Indigo.udruga?locale=hr_HR" target="_blank" class="transition"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/udruga.indigo/" target="_blank" class="transition"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </footer>
+        </section>
+    </body>
+    <script src="../header.js"></script>
+</html>
